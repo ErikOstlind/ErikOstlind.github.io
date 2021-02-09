@@ -138,6 +138,11 @@ p {
 	color: white
 }
 
-.scratchpad-wrap-outer div{
+.scratchpad-wrap-outer > div{
 	max-width: none !IMPORTANT;
+}
+
+.info{
+	position: relative;
+	z-index: 2;
 }

@@ -30,8 +30,8 @@
 				else if(type === 'fish'){
 					document.getElementsByTagName("BODY")[0].style.background = "#c4f8ff";
 					var dim = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 1.0;
-					var width = window.innerWidth * 0.95;
-					var height = window.innerHeight * 0.95;
+					var width = window.innerWidth * 0.90;
+					var height = window.innerHeight * 0.99;
 					var script = document.createElement("script")
 					script.src = "https://www.khanacademy.org/computer-programming/boid-pond/5615654214647808/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height;
 					script.id = "script"
@@ -84,19 +84,21 @@
 				</div>
 			</div>
 		</div>
-		<h1> Erik Ostlind </h1>
-		<a href="https://www.linkedin.com/in/erikostlind/" target="_blank">
-			<img class="headshot" src="./37188138291_9e4d510c16_o.jpg" width=227  height=300 alt="Erik Ostlind"/>
-		</a>
-		<p> Bachelors of Computer Science </p>
-		<div class="switch">
-			<div id="bawk" class="cover">
-				<img src="./bawk.png" width="80px" onclick="handleClick('bawk')">
-				<span class="bawk-text">Bawk</span>
-			</div>
-			<div id="fish" class="cover" style="display: none;">
-				<img src="./fish.png" width="80px" onclick="handleClick('fish')">
-			</div>
-		</div>		
+		<div class="info">
+			<h1> Erik Ostlind </h1>
+			<a href="https://www.linkedin.com/in/erikostlind/" target="_blank">
+				<img class="headshot" src="./37188138291_9e4d510c16_o.jpg" width=227  height=300 alt="Erik Ostlind"/>
+			</a>
+			<p> Bachelors of Computer Science </p>
+			<div class="switch">
+				<div id="bawk" class="cover">
+					<img src="./bawk.png" width="80px" onclick="handleClick('bawk')">
+					<span class="bawk-text">Bawk</span>
+				</div>
+				<div id="fish" class="cover" style="display: none;">
+					<img src="./fish.png" width="80px" onclick="handleClick('fish')">
+				</div>
+			</div>		
+		</div>
 	</body>
 </html>
