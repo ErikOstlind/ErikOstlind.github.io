@@ -30,8 +30,8 @@
 				else if(type === 'fish'){
 					document.getElementsByTagName("BODY")[0].style.background = "#c4f8ff";
 					var dim = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 1.0;
-					var width = window.innerWidth;
-					var height = window.innerHeight;
+					var width = window.innerWidth * 0.95;
+					var height = window.innerHeight * 0.95;
 					var script = document.createElement("script")
 					script.src = "https://www.khanacademy.org/computer-programming/boid-pond/5615654214647808/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height;
 					script.id = "script"

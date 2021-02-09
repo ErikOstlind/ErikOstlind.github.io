@@ -138,5 +138,6 @@ p {
 	color: white
 }
 
-.cover {
+.scratchpad-wrap-outer div{
+	max-width: none !IMPORTANT;
 }
