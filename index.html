@@ -30,15 +30,17 @@
 				else if(type === 'fish'){
 					document.getElementsByTagName("BODY")[0].style.background = "#c4f8ff";
 					var dim = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 1.0;
+					var width = window.innerWidth;
+					var height = window.innerHeight;
 					var script = document.createElement("script")
-					script.src = "https://www.khanacademy.org/computer-programming/boid-pond/5615654214647808/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+window.innerWidth+"&height="+window.innerHeight;
+					script.src = "https://www.khanacademy.org/computer-programming/boid-pond/5615654214647808/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height;
 					script.id = "script"
 					var canvas = document.getElementById("canvas");
 					canvas.append(script);
 					canvas.style["border-bottom-left-radius"] = "10px";
 					canvas.style["border-bottom-right-radius"] = "10px";
-					canvas.style.width = dim+"px";
-					canvas.style.height = dim+"px";
+					canvas.style.width = width+"px";
+					canvas.style.height = height+"px";
 					document.getElementById("dropdown").style.display = "none";
 					document.getElementById("bawk").style.display = "block";
 					document.getElementById("fish").style.display = "none";
