@@ -7,10 +7,12 @@
 	<body onload="handleClick('fish')">
 		<script type="application/javascript">
 			waitForElementToDisplay("iframe",function(){
+				console.log("found");
 				var iframe = document.getElementsByTagName("iframe")[0];
 				iframe.onload = function(){
 					console.log('loaded');
-					iframe.content.find(".scratchpad-wrap-outer").children.css("max-width", "none !IMPORTANT");
+					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+					innerDoc.getElementsByClassName("scratchpad-wrap-outer")[0].children[0].css("max-width", "none !IMPORTANT");
 				}
 			},100,5000);
 
