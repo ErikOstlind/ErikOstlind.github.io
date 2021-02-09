@@ -6,6 +6,17 @@
 	<title>Erik Ostlind</title>
 	<body onload="handleClick('fish')">
 		<script type="application/javascript">
+			/*$("iframe").load(function() {
+			   var frameContents;
+			   frameContents = $("iframe").contents(); 
+			   frameContents.find(".scratchpad-wrap-outer").children[0].css("color","#fff");
+			});*/
+			var iframe = document.getElementsByTagName("iframe")[0];
+			iframe.onload = function(){
+				console.log('loaded');
+				iframe.content.find(".scratchpad-wrap-outer").children.css("max-width", "none !IMPORTANT");
+			}
+			
 			function handleClick(type) {
 				document.getElementById("script").remove();
 				var iframes = document.getElementsByTagName("IFRAME");
