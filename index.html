@@ -6,16 +6,31 @@
 	<title>Erik Ostlind</title>
 	<body onload="handleClick('fish')">
 		<script type="application/javascript">
-			/*$("iframe").load(function() {
-			   var frameContents;
-			   frameContents = $("iframe").contents(); 
-			   frameContents.find(".scratchpad-wrap-outer").children[0].css("color","#fff");
-			});*/
-			var iframe = document.getElementsByTagName("iframe")[0];
-			iframe.onload = function(){
-				console.log('loaded');
-				iframe.content.find(".scratchpad-wrap-outer").children.css("max-width", "none !IMPORTANT");
+			waitForElementToDisplay("iframe",function(){
+				var iframe = document.getElementsByTagName("iframe")[0];
+				iframe.onload = function(){
+					console.log('loaded');
+					iframe.content.find(".scratchpad-wrap-outer").children.css("max-width", "none !IMPORTANT");
+				}
+			},100,5000);
+
+			function waitForElementToDisplay(selector, callback, checkFrequencyInMs, timeoutInMs) {
+			  var startTimeInMs = Date.now();
+			  (function loopSearch() {
+				if (document.querySelector(selector) != null) {
+				  callback();
+				  return;
+				}
+				else {
+				  setTimeout(function () {
+					if (timeoutInMs && Date.now() - startTimeInMs > timeoutInMs)
+					  return;
+					loopSearch();
+				  }, checkFrequencyInMs);
+				}
+			  })();
 			}
+			
 			
 			function handleClick(type) {
 				document.getElementById("script").remove();
