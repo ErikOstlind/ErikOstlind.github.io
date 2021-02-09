@@ -31,7 +31,7 @@
 					document.getElementsByTagName("BODY")[0].style.background = "#c4f8ff";
 					var dim = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 1.0;
 					var script = document.createElement("script")
-					script.src = "https://www.khanacademy.org/computer-programming/boid-pond/5615654214647808/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+dim+"&height="+dim;
+					script.src = "https://www.khanacademy.org/computer-programming/boid-pond/5615654214647808/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+window.innerWidth+"&height="+window.innerHeight;
 					script.id = "script"
 					var canvas = document.getElementById("canvas");
 					canvas.append(script);
