@@ -2,6 +2,7 @@ body {
 	/*background: linear-gradient(180deg, #777676, #000);*/
 	background: #c4f8ff;
 	transition: all 1s ease;
+	margin: 0px;
 }
 
 table {
