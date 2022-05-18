@@ -42,9 +42,7 @@
 				}
 				if(type === 'bawk'){
 					document.getElementsByTagName("BODY")[0].style.background = "linear-gradient(180deg, #777676, #000)";
-					var script = document.createElement("script")
-					script.src = "https://www.khanacademy.org/computer-programming/asteroidsphysics/6183045552947200/embed.js?editor=no&buttons=no&author=no&embed=yes&width=600&height=600";
-					script.id = "script"
+					var script = setScriptTag("https://www.khanacademy.org/computer-programming/asteroidsphysics/6183045552947200/embed.js?editor=no&buttons=no&author=no&embed=yes&width=600&height=600");
 					var canvas = document.getElementById("canvas");
 					canvas.append(script);
 					canvas.style["border-bottom-left-radius"] = 0;
@@ -60,9 +58,7 @@
 					var dim = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 1.0;
 					var width = Math.min(window.innerWidth * 0.90, 1200);
 					var height = window.innerHeight * 0.99;
-					var script = document.createElement("script")
-					script.src = "https://www.khanacademy.org/computer-programming/slide/6654911938871296/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height;
-					script.id = "script"
+					var script setScriptTag("https://www.khanacademy.org/computer-programming/slide/6654911938871296/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height);
 					var canvas = document.getElementById("canvas");
 					canvas.append(script);
 					canvas.style["border-bottom-left-radius"] = "10px";
@@ -73,6 +69,14 @@
 					document.getElementById("bawk").style.display = "block";
 					document.getElementById("slide").style.display = "none";
 				}
+			}
+			
+			function setScriptTag(url){
+				var script = document.createElement("script");
+				script.src = url;
+				script.id = "script";
+				script.crossorigin="anonymous";
+				return script;
 			}
 		</script>
 		<div class="container">
