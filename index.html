@@ -58,7 +58,7 @@
 					var dim = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 1.0;
 					var width = Math.min(window.innerWidth * 0.90, 1200);
 					var height = window.innerHeight * 0.99;
-					var script setScriptTag("https://www.khanacademy.org/computer-programming/slide/6654911938871296/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height);
+					var script = setScriptTag("https://www.khanacademy.org/computer-programming/slide/6654911938871296/embed.js?editor=no&buttons=no&author=no&embed=yes&width="+width+"&height="+height);
 					var canvas = document.getElementById("canvas");
 					canvas.append(script);
 					canvas.style["border-bottom-left-radius"] = "10px";
